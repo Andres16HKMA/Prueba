@@ -19,3 +19,12 @@ def validar_numero():
         return jsonify({'message': 'no hay error'}), 200
     else:
         return jsonify({'message': 'El dato no puede ser ubicado, cambie de posición'}), 400
+    
+
+if __name__ == '__main__':
+    # Utiliza Waitress como servidor en lugar del servidor de desarrollo de Flask para producción
+    from waitress import serve
+
+    print("Server running ")
+    serve(app, host='0.0.0.0', port=5000)
+
