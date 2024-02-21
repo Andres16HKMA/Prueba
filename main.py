@@ -9,7 +9,7 @@ load_dotenv()
 with open("ejemploTablero.json") as sudoku:
     tablero = json.load(sudoku)
     
-    
+
 
 @app.route('/validar', methods=['POST'])
 def validarCuadro():
