@@ -12,7 +12,7 @@ with open("ejemploTablero.json") as sudoku:
     
 
 @app.route('/validar', methods=['POST'])
-def validar_numero():
+def validarCuadro():
     
     if a.validador(tablero):
         # Si el número es válido, enviar el correo electrónico con el tablero
